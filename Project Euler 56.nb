@@ -1,0 +1,83 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2173,         74]
+NotebookOptionsPosition[      1847,         57]
+NotebookOutlinePosition[      2205,         73]
+CellTagsIndexPosition[      2162,         70]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"highest", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"a", "=", "1"}], ",", 
+      RowBox[{"a", "<", "100"}], ",", 
+      RowBox[{"a", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"b", "=", "1"}], ",", 
+         RowBox[{"b", "<", "100"}], ",", 
+         RowBox[{"b", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"value", " ", "=", " ", 
+           RowBox[{"Total", "[", 
+            RowBox[{"IntegerDigits", "[", 
+             RowBox[{"a", "^", "b"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"value", " ", ">", " ", "highest"}], ",", 
+            RowBox[{"highest", " ", "=", " ", "value"}]}], "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+    ";"}], "\[IndentingNewLine]", "highest"}]}]], "Input",
+ CellChangeTimes->{{3.658197039116251*^9, 3.65819710737831*^9}}],
+
+Cell[BoxData["972"], "Output",
+ CellChangeTimes->{3.658197040400407*^9, 3.6581971100706863`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{Automatic, -337}, {-177, Automatic}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1152, 29, 165, "Input"],
+Cell[1735, 53, 96, 1, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

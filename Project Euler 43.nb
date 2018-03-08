@@ -1,0 +1,159 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4512,        150]
+NotebookOptionsPosition[      3928,        125]
+NotebookOutlinePosition[      4284,        141]
+CellTagsIndexPosition[      4241,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Permutations", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", 
+    ",", "8", ",", "9"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6579127103638144`*^9, 3.657912755981379*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"4", ",", "5", ",", 
+   RowBox[{"6", " ", "and", " ", "5"}], ",", "6", ",", 
+   RowBox[{"7", " ", "share", " ", 
+    RowBox[{"two", ".", " ", "find"}], " ", "all", " ", "multiples", " ", 
+    "of", " ", "those", " ", "primes"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.657912933931855*^9, 3.657912951774235*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"list", " ", "=", " ", 
+   RowBox[{"Select", "[", 
+    RowBox[{"%", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], " ", "\[NotEqual]", " ", "0"}], 
+      "&"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.657912860969729*^9, 3.657912878598721*^9}, 
+   3.657912917983181*^9, 3.657912960929433*^9}],
+
+Cell[BoxData[
+ RowBox[{"newList", " ", "=", " ", 
+  RowBox[{"Select", "[", 
+   RowBox[{"list", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Mod", "[", 
+       RowBox[{
+        RowBox[{"FromDigits", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", 
+           RowBox[{"8", ";;", "10"}], "]"}], "]"}], "]"}], ",", "17"}], "]"}],
+       " ", "\[Equal]", "0"}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.657912972265607*^9, 3.6579130795701227`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"newList", " ", "=", " ", 
+  RowBox[{"Select", "[", 
+   RowBox[{"newList", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Mod", "[", 
+       RowBox[{
+        RowBox[{"FromDigits", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ";;", "4"}], "]"}], "]"}], "]"}], ",", "2"}], "]"}], 
+      " ", "\[Equal]", "0"}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.657913106221874*^9, 3.657913171866284*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "0", ",", "6", ",", "3", ",", "5", ",", "7", ",", "2",
+      ",", "8", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "3", ",", "0", ",", "9", ",", "5", ",", "2", ",", "8",
+      ",", "6", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "6", ",", "0", ",", "3", ",", "5", ",", "7", ",", "2",
+      ",", "8", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "1", ",", "0", ",", "6", ",", "3", ",", "5", ",", "7", ",", "2",
+      ",", "8", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "1", ",", "3", ",", "0", ",", "9", ",", "5", ",", "2", ",", "8",
+      ",", "6", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "1", ",", "6", ",", "0", ",", "3", ",", "5", ",", "7", ",", "2",
+      ",", "8", ",", "9"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.657913089577805*^9, {3.657913121127356*^9, 3.65791317269519*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", " ", "@", " ", 
+  RowBox[{"(", 
+   RowBox[{"FromDigits", "/@", "newList"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.657913179691998*^9, 3.657913194355385*^9}}],
+
+Cell[BoxData["16695334890"], "Output",
+ CellChangeTimes->{{3.65791318367038*^9, 3.65791319496607*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{Automatic, -8}, {-409, Automatic}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 269, 6, 28, "Input"],
+Cell[830, 28, 354, 7, 28, "Input"],
+Cell[1187, 37, 390, 11, 28, "Input"],
+Cell[1580, 50, 464, 13, 28, "Input"],
+Cell[CellGroupData[{
+Cell[2069, 67, 463, 13, 28, "Input"],
+Cell[2535, 82, 1043, 28, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3615, 115, 192, 4, 28, "Input"],
+Cell[3810, 121, 102, 1, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

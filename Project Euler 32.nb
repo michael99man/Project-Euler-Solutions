@@ -1,0 +1,161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4451,        152]
+NotebookOptionsPosition[      3858,        126]
+NotebookOutlinePosition[      4215,        142]
+CellTagsIndexPosition[      4172,        139]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pandigital", "[", 
+     RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Sort", "[", 
+      RowBox[{"Join", "@@", 
+       RowBox[{"IntegerDigits", "/@", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "b", ",", "c"}], "}"}]}]}], "]"}], " ", "\[Equal]",
+      " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", 
+       "8", ",", "9"}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pandigitals", " ", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"a", "=", "0"}], ",", 
+    RowBox[{"a", "\[LessEqual]", "10"}], ",", 
+    RowBox[{"a", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"b", "=", "1000"}], ",", 
+       RowBox[{"b", "\[LessEqual]", "10000"}], ",", 
+       RowBox[{"b", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"pandigital", "[", 
+           RowBox[{"a", ",", "b", ",", 
+            RowBox[{"a", "*", "b"}]}], "]"}], ",", 
+          RowBox[{"pandigitals", "=", 
+           RowBox[{"Append", "[", 
+            RowBox[{"pandigitals", ",", 
+             RowBox[{"{", 
+              RowBox[{"a", ",", "b"}], "}"}]}], "]"}]}]}], "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"pandigitals", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.657850685499393*^9, 3.6578509282693443`*^9}, {
+  3.657851170774911*^9, 3.657851171798778*^9}, {3.6578512168631496`*^9, 
+  3.657851226173533*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"4", ",", "1738"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "1963"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.657850795447147*^9, 3.657850824589209*^9}, 
+   3.6578509358929*^9, 3.657851228993557*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tally", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "*", 
+     RowBox[{"#", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}], "&"}], "/@", "pandigitals"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.657850947669507*^9, 3.657851004274336*^9}, {
+  3.657851061010915*^9, 3.657851089096382*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"6952", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7852", ",", "1"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.657850960023251*^9, {3.657850994995967*^9, 3.6578510045341053`*^9}, {
+   3.657851069831449*^9, 3.657851089411909*^9}, 3.6578512436652718`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.657851091091309*^9, 3.657851102720319*^9}, 
+   3.657851168927326*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"30424", "+", "6952", "+", "7852"}]], "Input",
+ CellChangeTimes->{{3.657851235037867*^9, 3.657851249788463*^9}}],
+
+Cell[BoxData["45228"], "Output",
+ CellChangeTimes->{3.657851250204669*^9}]
+}, Open  ]]
+},
+WindowSize->{816, 751},
+WindowMargins->{{211, Automatic}, {-186, Automatic}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1846, 50, 233, "Input"],
+Cell[2429, 74, 289, 8, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2755, 87, 370, 11, 28, "Input"],
+Cell[3128, 100, 344, 9, 28, "Output"]
+}, Open  ]],
+Cell[3487, 112, 118, 2, 28, "Input"],
+Cell[CellGroupData[{
+Cell[3630, 118, 135, 2, 28, InheritFromParent],
+Cell[3768, 122, 74, 1, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
